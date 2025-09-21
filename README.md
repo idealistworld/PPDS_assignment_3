@@ -76,25 +76,36 @@ What AI added
 
 ### Setup Steps
 
+1. **Create and activate virtual environment:**
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+```
+*Note: You should see `(venv)` in your terminal prompt when activated*
 
-# Create .env with your keys (do not commit)
+2. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Set up environment variables:**
+```bash
+# Create .env file with your API keys (do not commit)
 cat > .env << 'EOF'
 NEWS_API=YOUR_THENEWSAPI_KEY
 DEEPSEEK_API_KEY=YOUR_DEEPSEEK_KEY
 EOF
 ```
 
-## After Installation
+## Running the Application
 
-- Run the pipeline:
-
+**IMPORTANT: Always activate the virtual environment first:**
 ```bash
-python main.py
+source venv/bin/activate
+python3 main.py
 ```
+
+If you see `ModuleNotFoundError`, you forgot to activate the virtual environment.
 
 - Follow prompts for focus area, persona, and date/article counts.
 - Outputs:
