@@ -35,9 +35,3 @@ wheels/
 # OS
 .DS_Store
 Thumbs.db
-
-# Data files (optional - remove if you want to track data)
-data/raw/*
-data/enriched/*
-!data/raw/.gitkeep
-!data/enriched/.gitkeep
